@@ -7,6 +7,9 @@ public class StringCalculator {
             return 0;
         }
 
+        // Replace newlines with commas so both work as delimiters
+        numbers = numbers.replace("\n", ",");
+
         String[] tokens = numbers.split(",");
         int sum = 0;
         for (String token : tokens) {
