@@ -7,10 +7,10 @@ public class StringCalculator {
             return 0;
         }
 
-        String[] parts = numbers.split(",");
+        String[] tokens = numbers.split(",");
         int sum = 0;
-        for (String part : parts) {
-            sum += Integer.parseInt(part);
+        for (String token : tokens) {
+            sum += Integer.parseInt(token.trim());
         }
         return sum;
     }

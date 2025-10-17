@@ -23,4 +23,10 @@ class StringCalculatorTest {
         assertEquals(3, calc.add("1,2"));
     }
 
+    @Test
+    void add_multipleNumbers_returnsTheirSum() {
+        StringCalculator calc = new StringCalculator();
+        assertEquals(15, calc.add("1,2,3,4,5")); // 1+2+3+4+5 = 15
+    }
+
 }
