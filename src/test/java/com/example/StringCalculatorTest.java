@@ -47,4 +47,17 @@ public class StringCalculatorTest {
         assertEquals("negative numbers not allowed -2,-4", exception.getMessage());
     }
 
+    @Test
+    void add_numbersGreaterThan1000_areIgnored() {
+        StringCalculator calc = new StringCalculator();
+        assertEquals(2, calc.add("2,1001"));
+        assertEquals(1002, calc.add("2,1000")); // 1000 is included
+    }
+
+    @Test
+    void add_customDelimiterOfAnyLength() {
+        StringCalculator calc = new StringCalculator();
+        assertEquals(6, calc.add("//[***]\n1***2***3"));
+    }
+
 }

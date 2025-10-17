@@ -31,7 +31,7 @@ public class StringCalculator {
                 int num = Integer.parseInt(token.trim());
                 if (num < 0) {
                     negatives.add(String.valueOf(num));
-                } else {
+                } else if (num <= 1000) { // ignore numbers >1000
                     sum += num;
                 }
             }
